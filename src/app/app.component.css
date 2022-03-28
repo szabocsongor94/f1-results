@@ -1,0 +1,20 @@
+.container {
+    width:90vw
+}
+
+img {
+    height: 50px
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main {
+    margin: auto 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    
+}

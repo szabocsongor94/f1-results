@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-podium',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PodiumComponent implements OnInit {
 
+  @Input() podium: string[] = [];
+  @Output() closed = new EventEmitter<void>();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  close(){
+    this.closed.emit();
   }
 
 }

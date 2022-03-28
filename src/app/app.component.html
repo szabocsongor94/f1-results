@@ -1,10 +1,13 @@
 <div class="container">
   <div class="header">
-    <img src="" alt="f1 logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/2560px-F1.svg.png" alt="f1 logo">
     <h1 class="">Eredmények</h1>
   </div>
   <div class="main">
     <app-result-table [results]="results" [(selectedResult)]="selectedResult"></app-result-table>
-    <app-podium></app-podium>
+    <app-podium
+    *ngIf="selectedResult !== undefined"
+    [podium]="results[selectedResult].podium" 
+    (closed)="selectedResult = undefined"></app-podium>
   </div>
 </div>

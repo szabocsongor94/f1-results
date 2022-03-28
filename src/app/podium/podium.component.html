@@ -1,1 +1,8 @@
-<p>podium works!</p>
+<div class="podium">
+    <ol>
+        <li *ngFor="let driver of podium">
+            {{driver}}
+        </li>
+    </ol>
+    <button (click)="close()">Close</button>
+</div>
